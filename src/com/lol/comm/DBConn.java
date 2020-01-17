@@ -15,7 +15,7 @@ public class DBConn {
 	static public DBConn getDB() {
 		return DBC;
 	}
-	public Connection getConn() 
+	public Connection getConn ()  
 	{
 		/*String url = "jdbc:mysql://jinwoo.clwsj46gvpjl.ap-northeast-2.rds.amazonaws.com:3306/mydb?user=jinwoo&password=jinwoo2619!";
 		String user = "jinwoo";

@@ -31,7 +31,7 @@ public class EBInsertResultAction implements Action {
 	
 		ForwardAction forward=new ForwardAction();
 		forward.setForward(false);
-		forward.setUrl("/main.jsp?page=calBoard/CALInsert.jsp");
+		forward.setUrl("EBlist.do");
 		
 		return forward;
 	}

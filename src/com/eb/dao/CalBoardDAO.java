@@ -82,8 +82,8 @@ public class CalBoardDAO {
 		try {
 			pstmt=conn.prepareStatement(sql.toString());
 			pstmt.setString(1, dto.getBtitle());
-			pstmt.setString(2, dto.getBcontent());
-			pstmt.setString(3, dto.getBcaldate());
+			pstmt.setString(2, dto.getBcaldate());
+			pstmt.setString(3, dto.getBcontent());
 			pstmt.setString(4, dto.getId());
 			pstmt.executeUpdate();
 		} finally {
