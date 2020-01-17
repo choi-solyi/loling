@@ -1,6 +1,6 @@
-package com.jw.comm;
+package com.lol.comm;
 
-public class JWForwardAction {
+public class ForwardAction {
 	private String url;
 	private boolean forward;
 	public String getUrl() {

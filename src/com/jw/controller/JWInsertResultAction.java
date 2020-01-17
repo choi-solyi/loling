@@ -7,16 +7,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.jw.BoardDTO.JWBoardDTO;
-import com.jw.comm.JWAction;
-import com.jw.comm.JWBoardService;
-import com.jw.comm.JWForwardAction;
+import com.lol.comm.Action;
+import com.lol.comm.ForwardAction;
+import com.lol.comm.JWBoardService;
 
-public class JWInsertResultAction implements JWAction {
+public class JWInsertResultAction implements Action {
 
 	@Override
-	public JWForwardAction execute(HttpServletRequest request, HttpServletResponse response)
+	public ForwardAction execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		JWForwardAction f = new JWForwardAction();
+		ForwardAction f = new ForwardAction();
 		f.setForward(false);
 		f.setUrl("JWlist.do");
 		

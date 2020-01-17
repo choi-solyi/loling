@@ -1,4 +1,4 @@
-package com.jw.comm;
+package com.lol.comm;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,10 +9,10 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-public class JWDBConn {
-	private static JWDBConn DBC = new JWDBConn();
-	private JWDBConn() {};
-	static public JWDBConn getDB() {
+public class DBConn {
+	private static DBConn DBC = new DBConn();
+	private DBConn() {};
+	static public DBConn getDB() {
 		return DBC;
 	}
 	public Connection getConn() 
