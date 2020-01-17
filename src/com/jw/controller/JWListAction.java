@@ -11,16 +11,16 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import com.jw.BoardDTO.JWBoardDTO;
-import com.jw.comm.JWAction;
-import com.jw.comm.JWForwardAction;
-import com.jw.comm.JWBoardService;
+import com.lol.comm.Action;
+import com.lol.comm.ForwardAction;
+import com.lol.comm.JWBoardService;
 
-public class JWListAction implements JWAction{
+public class JWListAction implements Action{
 
 	@Override
-	public JWForwardAction execute(HttpServletRequest request, HttpServletResponse response)
+	public ForwardAction execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		JWForwardAction f = new JWForwardAction();
+		ForwardAction f = new ForwardAction();
 		JWBoardService service = JWBoardService.getBoardService();
 		List<JWBoardDTO> list = service.List();
 		request.setAttribute("list", list);

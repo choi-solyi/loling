@@ -1,4 +1,4 @@
-package com.jw.comm;
+package com.lol.comm;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -16,7 +16,7 @@ public class JWBoardService {
 	}
 	
 	public List<JWBoardDTO> List() {
-		JWDBConn DBC = JWDBConn.getDB();
+		DBConn DBC = DBConn.getDB();
 		JWBoardDAO dao = JWBoardDAO.getBoardDAO();
 		Connection conn = DBC.getConn();
 		List<JWBoardDTO> list = new ArrayList<>();
@@ -31,7 +31,7 @@ public class JWBoardService {
 	}
 	
 	public void Insert(JWBoardDTO dto) {
-		JWDBConn DBC = JWDBConn.getDB();
+		DBConn DBC = DBConn.getDB();
 		JWBoardDAO dao = JWBoardDAO.getBoardDAO();
 		Connection conn = DBC.getConn();
 		try {

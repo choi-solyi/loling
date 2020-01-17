@@ -1,4 +1,4 @@
-package com.jw.comm;
+package com.lol.comm;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -21,17 +21,17 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(urlPatterns= {"*.do"},initParams= {
 		@WebInitParam(name="init", value="WEB-INF/prop.properties")})
-public class JWFrontcontroller extends HttpServlet {
+public class Frontcontroller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * Default constructor. 
      */
-    public JWFrontcontroller() {
+    public Frontcontroller() {
         // TODO Auto-generated constructor stub
     }
 
-    HashMap<String, JWAction> hm = new HashMap<>();
+    HashMap<String, Action> hm = new HashMap<>();
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		// TODO Auto-generated method stub
@@ -47,8 +47,10 @@ public class JWFrontcontroller extends HttpServlet {
 			{
 				String key = (String)enu.nextElement();
 				String value = properties.getProperty(key);
+				System.out.println(key);
+				System.out.println(value);
 				Class c = Class.forName(value);
-				JWAction act = (JWAction)c.newInstance();
+				Action act = (Action)c.newInstance();
 				System.out.println(key);
 				System.out.println(act);
 				hm.put(key, act);
@@ -77,10 +79,11 @@ public class JWFrontcontroller extends HttpServlet {
 	private void doReq(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String path = request.getServletPath();
-		JWAction act = null;
-		
+		Action act = null;
 		act = hm.get(path);
-		JWForwardAction f = act.execute(request, response);
+		System.out.println(path);
+		System.out.println(act);
+		ForwardAction f = act.execute(request, response);
 		if(f.isForward())
 		{
 			RequestDispatcher disp = request.getRequestDispatcher(f.getUrl());
