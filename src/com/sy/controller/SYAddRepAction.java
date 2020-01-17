@@ -25,7 +25,7 @@ public class SYAddRepAction implements Action {
 		JGRepBoardDTO rdto = new JGRepBoardDTO();
 		
 		rdto.setRcontent(rcontent);
-		rdto.setNick(nick);
+		/*rdto.setNick(nick);*/
 		
 		JGBoardService service = JGBoardService.getService();
 		
