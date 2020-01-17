@@ -10,7 +10,7 @@ import javax.sql.DataSource;
 
 public class DBConn {
 	private static DBConn instanse = new DBConn();
-	public static DBConn getinstance() {
+	public static DBConn getDB() {
 		return instanse;
 	}
 	private DBConn() {}
