@@ -28,7 +28,7 @@ public class EBDetailAction implements Action {
 		request.setAttribute("dto", dto);
 		ForwardAction forward=new ForwardAction();
 		forward.setForward(true);
-		forward.setUrl("/main.jsp?page=calBoard/CALDetail.jsp");
+		forward.setUrl("/main.jsp?page=calboard/CALDetail.jsp");
 		
 		return forward;
 	}

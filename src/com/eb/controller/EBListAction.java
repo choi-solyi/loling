@@ -18,8 +18,8 @@ public class EBListAction implements Action {
 	@Override
 	public ForwardAction execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.setCharacterEncoding("utf-8");
-		response.setContentType("text/html; chartset=utf-8");
+		
+	
 
 		CalBoardService service=CalBoardService.getService();
 		List<CalBoardDTO> list=service.list();
@@ -28,8 +28,8 @@ public class EBListAction implements Action {
 	
 		ForwardAction forward=new ForwardAction();
 		forward.setForward(true);
-		forward.setUrl("/main.jsp?page=calBoard/CALList.jsp");
-	
+		forward.setUrl("main.jsp?page=calboard/CALList.jsp");
+
 		return forward;
 	}
 

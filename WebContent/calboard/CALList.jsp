@@ -17,9 +17,9 @@
 	<ul>
 	 <c:forEach items="${requestScope.list}" var="index"> 
 		<li>
-		<a href="detail.do?bno=${index.bno}">${index.bno}</a>
-		<a href="detail.do?bno=${index.bno}">${index.bcaldate}</a>
-		<a href="detail.do?bno=${index.bno}">${index.btitle}</a>
+		<a href="EBdetail.do?bno=${index.bno}">${index.bno}</a>
+		<a href="EBdetail.do?bno=${index.bno}">${index.bcaldate}</a>
+		<a href="EBdetail.do?bno=${index.bno}">${index.btitle}</a>
 		${index.bhit}
 		${index.bup}
 		</li>

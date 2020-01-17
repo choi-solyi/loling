@@ -15,8 +15,8 @@ public class EBInsertAction implements Action {
 	public ForwardAction execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		ForwardAction forward=new ForwardAction();
-		forward.setForward(true);
-		forward.setUrl("/main.jsp?page=calBoard/CALInsert.jsp");
+		forward.setForward(false);
+		forward.setUrl("main.jsp?page=calboard/CALInsert.jsp");
 		
 		return forward;
 	}
