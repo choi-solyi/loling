@@ -1,4 +1,4 @@
-package com.lol.comm;
+package com.jw.service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -7,6 +7,7 @@ import java.util.List;
 
 import com.jw.BoardDAO.JWBoardDAO;
 import com.jw.BoardDTO.JWBoardDTO;
+import com.lol.comm.DBConn;
 
 public class JWBoardService {
 	private static JWBoardService service = new JWBoardService();

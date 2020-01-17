@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.jw.BoardDTO.JWBoardDTO;
+import com.jw.service.JWBoardService;
 import com.lol.comm.Action;
 import com.lol.comm.ForwardAction;
-import com.lol.comm.JWBoardService;
 
 public class JWInsertResultAction implements Action {
 

@@ -11,9 +11,9 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import com.jw.BoardDTO.JWBoardDTO;
+import com.jw.service.JWBoardService;
 import com.lol.comm.Action;
 import com.lol.comm.ForwardAction;
-import com.lol.comm.JWBoardService;
 
 public class JWListAction implements Action{
 
